@@ -1,0 +1,77 @@
+@import "compass/css3/box-shadow";
+// 15x22
+
+$size: 3;
+
+$yellow: #FAFB00;
+$bright_green: #75F878;
+$light_green: #4ED04C;
+$green: #179A18;
+$dark_green: #006900;
+$blue: #0000FE;
+$white: #fff;
+$black: #000;
+$light_pink: #F7AAFA;
+$pink: #FA30DA;
+$dark_pink:#C800A9;
+$dark_skin:#C37F52;
+$light_skin:#F8A861;
+
+@function row_color_generate($row_number,$c1,$c2,$c3,$c4,$c5,$c6,$c7,$c8,$c9,$c10,$c11,$c12,$c13,$c14,$c15){
+	$tmp: $c1 1+($size*0)+px 4+($size*($row_number - 1))+px, 
+		$c2 1+($size*1)+px 4+($size*($row_number - 1))+px,
+		$c3 1+($size*2)+px 4+($size*($row_number - 1))+px,
+		$c4 1+($size*3)+px 4+($size*($row_number - 1))+px,
+		$c5 1+($size*4)+px 4+($size*($row_number - 1))+px,
+		$c6 1+($size*5)+px 4+($size*($row_number - 1))+px,
+		$c7 1+($size*6)+px 4+($size*($row_number - 1))+px,
+		$c8 1+($size*7)+px 4+($size*($row_number - 1))+px,
+		$c9 1+($size*8)+px 4+($size*($row_number - 1))+px,
+		$c10 1+($size*9)+px 4+($size*($row_number - 1))+px,
+		$c11 1+($size*10)+px 4+($size*($row_number - 1))+px,
+		$c12 1+($size*11)+px 4+($size*($row_number - 1))+px,
+		$c13 1+($size*12)+px 4+($size*($row_number - 1))+px,
+		$c14 1+($size*13)+px 4+($size*($row_number - 1))+px,
+		$c15 1+($size*14)+px 4+($size*($row_number - 1))+px;
+
+	@return $tmp;
+}
+
+
+
+
+$row_1: row_color_generate(1,$black,$black,$black,$black,$black,$black,$light_green,$light_green,$light_green,$yellow,$light_green,$green,$black,$black,$black);
+$row_2: row_color_generate(2,$black,$black,$black,$black,$light_green,$light_green,$yellow,$light_green,$light_green,$black,$black,$light_green,$green,$black,$black);
+$row_3: row_color_generate(3,$black,$black,$black,$light_green,$white,$yellow,$light_green,$dark_green,$black,$light_pink,$pink,$black,$yellow,$light_green,$black);
+$row_4: row_color_generate(4,$black,$black,$black,$light_green,$yellow,$light_green,$dark_green,$dark_skin,$black,$pink,$dark_pink,$black,$light_green,$green,$black);
+$row_5: row_color_generate(5,$black,$black,$black, $yellow,$light_green,$dark_green,$dark_skin,$dark_skin,$dark_skin,$black,$black,$green,$green,$light_green,$black);
+$row_6: row_color_generate(6,$black,$black,$light_green,$light_green,$green,$black,$black,$black,$dark_skin,$dark_skin,$green,$light_skin,$light_skin,$dark_green,$black);
+$row_7: row_color_generate(7,$black,$black,$yellow,$light_green,$dark_green,$dark_skin,$blue,$white,$black,$dark_skin,$green,$dark_skin,$light_skin,$dark_green,$black);
+$row_8: row_color_generate(8,$black,$yellow,$light_green,$light_green,$green,$light_skin,$blue,$white,$dark_skin,$dark_skin,$green,$light_skin,$dark_green,$dark_green,$black);
+$row_9: row_color_generate(9,$light_green,$black,$light_green,$green,$green,$light_skin,$light_skin,$light_skin,$white,$dark_skin,$green,$dark_green,$dark_green,$black,$black);
+$row_10: row_color_generate(10,$black,$light_green,$green,$dark_green,$green,$light_skin,$light_skin,$light_skin,$dark_skin,$dark_green,$black,$black,$black,$black,$black);
+$row_11: row_color_generate(11,$black,$green,$black,$green,$green,$black,$light_skin,$dark_skin,$black,$black,$light_skin,$dark_skin,$black,$black,$black);
+$row_12: row_color_generate(12,$black,$black,$black,$green,$black,$dark_green,$black,$black,$dark_skin,$green,$light_skin,$light_skin,$dark_skin,$black,$black);
+$row_13: row_color_generate(13,$black,$black,$black,$black,$black,$black,$dark_skin,$light_skin,$green,$black,$black,$black,$black,$bright_green,$black);
+$row_14: row_color_generate(14,$black,$light_skin,$light_skin,$dark_green,$black,$green,$light_skin,$green,$black,$light_skin,$light_skin,$dark_green,$bright_green,$yellow,$bright_green);
+$row_15: row_color_generate(15,$black,$light_skin,$dark_skin,$dark_green,$light_green,$black,$green,$yellow,$black,$light_skin,$dark_skin,$dark_green,$bright_green,$yellow,$light_green);
+$row_16: row_color_generate(16,$black,$black,$black,$light_green,$yellow,$light_green,$black,$green,$green,$dark_green,$dark_green,$black,$bright_green,$yellow,$light_green);
+$row_17: row_color_generate(17,$black,$black,$black,$bright_green,$yellow,$light_green,$black,$dark_green,$dark_skin,$light_skin,$dark_skin,$black,$bright_green,$yellow,$light_green);
+$row_18: row_color_generate(18,$black,$black,$black,$bright_green,$light_green,$black,$black,$black,$light_skin,$light_skin,$dark_skin,$black,$bright_green,$yellow,$light_green);
+$row_19: row_color_generate(19,$black,$black,$black,$bright_green,$light_green,$black,$black,$black,$light_skin,$light_green,$light_green,$green,$dark_green,$light_green,$light_green); 
+$row_20: row_color_generate(20,$black,$black,$black,$light_green,$black,$black,$black,$black,$bright_green,$light_green,$green,$dark_green,$black,$light_green,$light_green);
+$row_21: row_color_generate(21,$black,$black,$black,$light_green,$black,$black,$black,$black,$bright_green,$light_green,$yellow,$black,$black,$black,$light_green);
+$row_22: row_color_generate(22,$black,$black,$black,$black,$black,$black,$black,$bright_green,$light_green,$black,$yellow,$black,$black,$black,$light_green);
+
+body{
+	margin:0;
+}
+.container{
+	height:100px;
+	width:100px;
+}
+.pixl{
+	height:$size+px;
+	width:$size+px;
+	box-shadow:$row_1,$row_2,$row_3,$row_4,$row_5,$row_6,$row_7,$row_8,$row_9,$row_10,$row_11,$row_12,$row_13,$row_14,$row_15,$row_16,$row_17,$row_18,$row_19,$row_20,$row_21,$row_22;
+}

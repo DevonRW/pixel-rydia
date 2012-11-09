@@ -1,0 +1,3 @@
+#Rydia from Final Fantasy 4 made entire in CSS
+
+Poke through the source. I used SCSS to be able to generate the rows of "pixels". All uses box-shadow to emulate a pixels.
